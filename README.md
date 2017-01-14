@@ -95,7 +95,7 @@ Extension for media based types like images, audio, videos and documents are col
 ![][scrot-extension-pattern-media]
 
 #### Ignores
-This themes colores extensions that are produced during a application runtime and should be ignored by version control systems with the dimmed color `nord4`.
+This themes colores extensions that are produced during a application runtime which should be ignored by version control systems with the dimmed color `nord4`.
 
 ![][scrot-extension-pattern-ignores]
 
