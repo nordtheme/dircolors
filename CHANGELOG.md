@@ -4,6 +4,17 @@
 
 ---
 
+# 0.1.0
+*2017-01-14*
+## Features
+❯ Implemented the main color theme file [`dir_colors`](https://github.com/arcticicestudio/nord-dircolors/blob/develop/src/dir_colors). (@arcticicestudio, #1, aa0b485a)
+
+❯ Implementd a [`install.sh`](https://github.com/arcticicestudio/nord-dircolors/blob/develop/install.sh) shell script for an automated installation . (@arcticicestudio, #2, 9326ee6a)
+
+Detailed information about features and install instructions can be found in the [README](https://github.com/arcticicestudio/nord-dircolors/blob/develop/README.md#installation) and in the [project wiki](https://github.com/arcticicestudio/nord-dircolors/wiki).
+
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/assets/scrot-preview.png"/></p>
+
 # 0.0.0
 *2017-01-14*
 **Project Initialization**
