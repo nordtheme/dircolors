@@ -101,7 +101,7 @@ NORD_DIRCOLORS_SCRIPT_OPTS=`getopt -o vhc: --long verbose,help,colorthemefile: -
 COLOR_THEME_FILE=src/dir_colors
 VERBOSE=false
 LOCAL_INSTALL_DIR=~
-NORD_DIRCOLORS_VERSION=0.0.0
+NORD_DIRCOLORS_VERSION=0.1.0
 
 eval set -- "$NORD_DIRCOLORS_SCRIPT_OPTS"
 while true; do
