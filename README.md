@@ -79,7 +79,7 @@ Sockets are also colored by `nord13` and addionally using a underlined font.
 ![][scrot-global-defaults-blocks-and-sockets]
 
 #### Capabilities
-The GID `g+s` and UID `u+s` capability flags are colored by the default `nord4` using a bold font.
+The GID `g+s` and UID `u+s` capability flags are colored by the default `nord4` using a bold- and underlined font.
 
 ![][scrot-global-defaults-capabilities]
 
@@ -95,7 +95,7 @@ Extension for media based types like images, audio, videos and documents are col
 ![][scrot-extension-pattern-media]
 
 #### Ignores
-This themes colores extensions that are produced during a application runtime which should be ignored by version control systems with the dimmed color `nord4`.
+This theme colorizes extensions that are produced during a application runtime, which should be ignored by version control systems, with the dimmed effect applied to `nord4`.
 
 ![][scrot-extension-pattern-ignores]
 
