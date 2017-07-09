@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://assets-cdn.github.com/favicon.ico" width=24 height=24/> <a href="https://github.com/arcticicestudio/nord-dircolors/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/nord-dircolors.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/nord/releases/tag/v0.2.0"><img src="https://img.shields.io/badge/nord-v0.2.0-88C0D0.svg?style=flat-square"/></a></p>
 
-<p align="center">A arctic, north-bluish clean and elegant <a href="https://www.gnu.org/software/coreutils/dircolors">dircolors</a> color theme.</p>
+<p align="center">An arctic, north-bluish clean and elegant <a href="https://www.gnu.org/software/coreutils/dircolors">dircolors</a> color theme.</p>
 
 <p align="center">Designed for a fluent and clear workflow.<br>
 Based on the <a href="https://github.com/arcticicestudio/nord">Nord</a> color palette.</p>
@@ -24,7 +24,7 @@ Make sure to install one of the currently supported terminal themes listed below
 [![Nord PuTTY](https://cdn.rawgit.com/arcticicestudio/nord/develop/src/assets/nord-putty-banner.svg)](https://github.com/arcticicestudio/nord-putty)  
 [![Nord Terminal.app](https://cdn.rawgit.com/arcticicestudio/nord/develop/src/assets/nord-terminal-app-banner.svg)](https://github.com/arcticicestudio/nord-terminal-app)  
 [![Nord Terminator](https://cdn.rawgit.com/arcticicestudio/nord/develop/src/assets/nord-terminator-banner.svg)](https://github.com/arcticicestudio/nord-terminator)  
-[![Nord Terminix](https://cdn.rawgit.com/arcticicestudio/nord/develop/src/assets/nord-terminix-banner.svg)](https://github.com/arcticicestudio/nord-terminix)  
+[![Nord Tilix](https://cdn.rawgit.com/arcticicestudio/nord/develop/src/assets/nord-tilix-banner.svg)](https://github.com/arcticicestudio/nord-tilix)  
 [![Nord Termite](https://cdn.rawgit.com/arcticicestudio/nord/develop/src/assets/nord-termite-banner.svg)](https://github.com/arcticicestudio/nord-termite)  
 [![Nord XFCE Terminal](https://cdn.rawgit.com/arcticicestudio/nord/develop/src/assets/nord-xfce-terminal-banner.svg)](https://github.com/arcticicestudio/nord-xfce-terminal)  
 [![Nord Xresources](https://cdn.rawgit.com/arcticicestudio/nord/develop/src/assets/nord-xresources-banner.svg)](https://github.com/arcticicestudio/nord-xresources)  
@@ -79,7 +79,7 @@ Sockets are also colored by `nord13` and addionally using a underlined font.
 ![][scrot-global-defaults-blocks-and-sockets]
 
 #### Capabilities
-The GID `g+s` and UID `u+s` capability flags are colored by the default `nord4` using a bold font.
+The GID `g+s` and UID `u+s` capability flags are colored by the default `nord4` using a bold- and underlined font.
 
 ![][scrot-global-defaults-capabilities]
 
@@ -95,12 +95,12 @@ Extension for media based types like images, audio, videos and documents are col
 ![][scrot-extension-pattern-media]
 
 #### Ignores
-This themes colores extensions that are produced during a application runtime which should be ignored by version control systems with the dimmed color `nord4`.
+This theme colorizes extensions that are produced during a application runtime, which should be ignored by version control systems, with the dimmed effect applied to `nord4`.
 
 ![][scrot-extension-pattern-ignores]
 
 ## Development
-[![](https://img.shields.io/badge/Changelog-0.1.0-blue.svg)](https://github.com/arcticicestudio/nord-dircolors/blob/v0.1.0/CHANGELOG.md) [![](https://img.shields.io/badge/Workflow-gitflow--branching--model-blue.svg)](http://nvie.com/posts/a-successful-git-branching-model) [![](https://img.shields.io/badge/Versioning-ArcVer_0.8.0-blue.svg)](https://github.com/arcticicestudio/arcver)
+[![](https://img.shields.io/badge/Changelog-0.1.1-81A1C1.svg?style=flat-square)](https://github.com/arcticicestudio/nord-dircolors/blob/v0.1.1/CHANGELOG.md) [![](https://img.shields.io/badge/Workflow-gitflow--branching--model-81A1C1.svg?style=flat-square)](http://nvie.com/posts/a-successful-git-branching-model) [![](https://img.shields.io/badge/Versioning-ArcVer_0.8.0-81A1C1.svg?style=flat-square)](https://github.com/arcticicestudio/arcver)
 
 ### Contribution
 Please report issues/bugs, feature requests and suggestions for improvements to the [issue tracker](https://github.com/arcticicestudio/nord-dircolors/issues).
@@ -109,7 +109,7 @@ Please report issues/bugs, feature requests and suggestions for improvements to 
 
 <p align="center"> <img src="http://arcticicestudio.com/favicon.ico" width=16 height=16/> Copyright &copy; 2017 Arctic Ice Studio</p>
 
-<p align="center"><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a> <a href="https://creativecommons.org/licenses/by-sa/4.0"><img src="https://img.shields.io/badge/License-CC_BY--SA_4.0-blue.svg"/></a></p>
+<p align="center"><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-5E81AC.svg?style=flat-square"/></a> <a href="https://creativecommons.org/licenses/by-sa/4.0"><img src="https://img.shields.io/badge/License-CC_BY--SA_4.0-5E81AC.svg?style=flat-square"/></a></p>
 
 [scrot-extension-pattern-ignores]: https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/assets/scrot-extension-pattern-ignores.png
 [scrot-extension-pattern-media]: https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/assets/scrot-extension-pattern-media.png

@@ -4,6 +4,11 @@
 
 ---
 
+# 0.1.1
+*2017-07-09*
+## Bug Fixes
+❯ Fixed uncolorized output on some terminal setups caused by missing `*-256color` `TERM` definitions. (@ruturajv, #4 PR #6, 15286923)
+
 # 0.1.0
 *2017-01-14*
 ## Features
