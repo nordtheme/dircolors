@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Install Script                                    +
-# project    nord-dircolors                                    +
-# repository https://github.com/arcticicestudio/nord-dircolors +
-# author     Arctic Ice Studio                                 +
-# email      development@arcticicestudio.com                   +
-# copyright  Copyright (C) 2017                                +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
+
+# Project:    Nord dircolors
+# Repository: https://github.com/arcticicestudio/nord-dircolors
+# License:    MIT
 set -e
 
 _ct_error="\e[0;31m"
