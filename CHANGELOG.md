@@ -6,6 +6,35 @@
 
 <!--lint disable no-duplicate-headings-->
 
+# 0.2.0
+
+![Release Date: 2019-06-22](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2016-06-22&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.2.0&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-dircolors/projects/4) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.2.0&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-dircolors/milestone/3)
+
+## Features
+
+**Nord Docs Transition** — #13 ⇄ #14 (⊶ abfb30be)
+↠ Transferred all documentations, assets and from „Nord dircolors“ to [Nord Docs][nord]
+Please see the [corresponding issue in the Nord Docs repository][gh-nord-docs#155] to get an overview of what has changed for Nord dircolors and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/dircolors" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942887-25e4c900-9461-11e9-8532-50f3032c9ff6.png" alt="Preview: Nord dircolors Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942885-25e4c900-9461-11e9-80d4-aeb06c17bf42.png" alt="Preview: Nord dircolors Docs Page"/></a></p>
+
+<p align="center">Installation & Activation Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942884-25e4c900-9461-11e9-899f-37e80ca1d7db.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+
+<p align="center">Type Support</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors/type-support" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942886-25e4c900-9461-11e9-98bd-ddd164ca2447.png" alt="Preview: Configuration Guide Page"/></a></p>
+
+## Tasks
+
+### Documentation
+
+**MIT License Migration** — #8 ⇄ #9 (⊶ 96b20ecb)
+↠ Migrated to the MIT license to adapt to the migration of the main [Nord][gh-nord] project. Detailed information can be found in the [main task ticket][gh-nord#55].
+
 # 0.1.1
 
 _2017-07-09_
@@ -46,3 +75,11 @@ _2017-01-14_
 <!--lint disable final-definition-->
 
 <!-- Base Links -->
+
+[gh-nord]: https://github.com/arcticicestudio/nord
+[nord]: https://www.nordtheme.com
+
+<!-- v0.2.0 -->
+
+[gh-nord-docs#155]: https://github.com/arcticicestudio/nord-docs/issues/155
+[gh-nord#55]: https://github.com/arcticicestudio/nord/issues/55
