@@ -1,12 +1,10 @@
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# title      Nord dircolors                                    +
-# project    nord-dircolors                                    +
-# version    0.1.1                                             +
-# repository https://github.com/arcticicestudio/nord-dircolors +
-# author     Arctic Ice Studio                                 +
-# email      development@arcticicestudio.com                   +
-# copyright  Copyright (C) 2017                                +
-# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Copyright (C) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2017-present Sven Greb <development@svengreb.de>
+
+# Project:    Nord dircolors
+# Version:    0.2.0
+# Repository: https://github.com/arcticicestudio/nord-dircolors
+# License:    MIT
 
 COLOR tty
 
