@@ -10,11 +10,11 @@
 
 <p align="center"><a href="https://www.nordtheme.com/ports/dircolors" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/ports/dircolors/overview.png"/></a></p>
 
-## Getting started
+# Getting started
 
 Visit the [official website][nord-home] to learn all about the [features][nord-home#intro], how to [install and activate][nord-docs-home-install] the theme, supported [data and node types][nord-docs-home-types] and more from the [official documentations][nord-docs-home].
 
-### Quick Start
+## Quick Start
 
 Nord dircolors can be installed for all application that respect the `LS_COLORS` environment variable like GNU core utils [`ls`][wiki-ls], [`tree`][wiki-tree] or modern projects like [`fd`][gh-sharkdp/fd].
 
@@ -22,7 +22,7 @@ Download the [`dir_colors`][gh-tree-dir_colors] file and place it as `~/.dir_col
 
 For more details see the [official installation & activation guide][nord-docs-home-install] as well as the [GNU `dircolors` documentations][gnu-docs-dircolors].
 
-#### Latest Development State
+### Latest Development State
 
 To always use the latest development state of Nord dircolors, [clone the repository][repo] and create a [symbolic link][wiki-symlink] of the `src/dir_colors` file to `~/.dir_colors` in your [home directory][wiki-home_dir] afterwards:
 
@@ -30,7 +30,7 @@ To always use the latest development state of Nord dircolors, [clone the reposit
 ln -sr "$PWD/src/dir_colors" "~/.dir_colors"
 ```
 
-#### Activation
+### Activation
 
 To activate and use Nord dircolors as your default color theme for all sessions, load the theme with `dircolors` by adding the following snippet to the configuration file of your shell (`~/.bashrc`, `~/.zshrc`, …):
 
