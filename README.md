@@ -27,7 +27,7 @@ For more details see the [official installation & activation guide][nord-docs-ho
 To always use the latest development state of Nord dircolors, [clone the repository][repo] and create a [symbolic link][wiki-symlink] of the `src/dir_colors` file to `~/.dir_colors` in your [home directory][wiki-home_dir] afterwards:
 
 ```sh
-ln -sr "$PWD/src/dir_colors" "~/.dir_colors"
+ln -sr "$PWD/src/dir_colors" ~/.dir_colors
 ```
 
 ### Activation
@@ -35,7 +35,7 @@ ln -sr "$PWD/src/dir_colors" "~/.dir_colors"
 To activate and use Nord dircolors as your default color theme for all sessions, load the theme with `dircolors` by adding the following snippet to the configuration file of your shell (`~/.bashrc`, `~/.zshrc`, …):
 
 ```sh
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+test -r ~/.dir_colors && eval $(dircolors ~/.dir_colors)
 ```
 
 <p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/ports/dircolors/installation-shell-rc.png"/></p>
