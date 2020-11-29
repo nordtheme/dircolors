@@ -5,14 +5,6 @@
 <p align="center">Changelog for <a href="https://www.nordtheme.com/ports/dircolors" target="_blank">Nord dircolors</a> — An arctic, north-bluish clean and elegant <a href="https://www.gnu.org/software/coreutils/dircolors" target="_blank">dircolors</a> theme.</p>
 
 <!--lint disable no-duplicate-headings-->
-
-# 0.2.1
-
-_2020-11-10_
-
-- Removed quotes from "~/.dir_colors" in **README.md** to fix symlink creation issue
-- Change heading levels in **README.md** to conform to Markdown standards (no skipped levels)
-
 # 0.2.0
 
 ![Release Date: 2019-06-22](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2016-06-22&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.2.0&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-dircolors/projects/4) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.2.0&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-dircolors/milestone/3)
