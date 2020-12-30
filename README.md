@@ -38,6 +38,8 @@ To activate and use Nord dircolors as your default color theme for all sessions,
 test -r ~/.dir_colors && eval $(dircolors ~/.dir_colors)
 ```
 
+> For `zsh`, color does not output to the terminal for `ls` unless `ls --color` is used. You can alias the `ls` command inside your `.zshrc` file with `alias ls='ls --color=auto'` to have `ls` output the colors for each session.
+
 <p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/ports/dircolors/installation-shell-rc.png"/></p>
 
 ## Features
