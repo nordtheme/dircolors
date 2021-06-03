@@ -305,7 +305,6 @@ STICKY 04;37;44
 .yaml 33
 .yml 33
 .toml 33
-.nuspec 33 # NuGet specification
 
 #+--- Stylesheets ---+
 .css 35
