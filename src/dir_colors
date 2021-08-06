@@ -178,7 +178,10 @@ STICKY 04;37;44
 .cmd 01;36
 .com 01;36
 .exe 01;36
+.ps1 01;36
+.psm1 01;36
 .reg 01;36
+.sh 01;36
 
 #+--- Installable or indirectly executable files ---+
 .woff 36
@@ -272,34 +275,37 @@ STICKY 04;37;44
 #+--- Source code files ---+
 .cc 32
 .cpp 32
-.h 32
 .cs 32
 .fs 32
-.rs 32
 .go 32
+.h 32
+.htm 32
+.html 32
+.java 32
 .js 32
 .jsx 32
+.lua 32
+.m 32
+.pug 32
+.py 32
+.rs 32
+.scala 32
+.swift 32
 .ts 32
 .tsx 32
-.lua 32
-.java 32
-.scala 32
-.py 32
-.m 32
-.swift 32
 
 #+--- Project-like files with source code ---+
-.htm 31
-.html 31
-.pug 31
 .csproj 31
 .vcxproj 31
+.sfproj 31
+.deployproj 31
 .sln 31
 
 #+--- Text and configuration files ---+
 .csv 33
 .json 33
 .md 33
+.nuspec 33
 .txt 33
 .xml 33
 .yaml 33
