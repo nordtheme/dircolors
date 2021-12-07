@@ -46,6 +46,7 @@ TERM terminator
 TERM tmux*
 TERM tmux-256color
 TERM vt100
+TERM wezterm
 TERM xterm*
 TERM xterm-color
 TERM xterm-88color
