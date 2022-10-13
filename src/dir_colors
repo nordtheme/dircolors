@@ -2,7 +2,7 @@
 # Copyright (C) 2017-present Sven Greb <development@svengreb.de>
 
 # Project:    Nord dircolors
-# Version:    0.2.0
+# Version:    0.3.0
 # Repository: https://github.com/arcticicestudio/nord-dircolors
 # License:    MIT
 
@@ -178,7 +178,19 @@ STICKY 04;37;44
 .cmd 01;36
 .com 01;36
 .exe 01;36
+.ps1 01;36
+.psm1 01;36
 .reg 01;36
+.sh 01;36
+
+#+--- Installable or indirectly executable files ---+
+.woff 36
+.woff2 36
+.eot 36
+.otf 36
+.ttf 36
+.jar 36
+.apk 36
 
 #+--- Ignores ---+
 *~ 02;37
@@ -192,6 +204,11 @@ STICKY 04;37;44
 .ORIG 02;37
 .swo 02;37
 .swp 02;37
+
+#+--- Binary files ---+
+.dll 02;37
+.so 02;37
+.o 02;37
 
 #+--- Images ---+
 .bmp 32
@@ -254,3 +271,49 @@ STICKY 04;37;44
 .vob 32
 .webm 32
 .wmv 32
+
+#+--- Source code files ---+
+.cc 32
+.cpp 32
+.cs 32
+.fs 32
+.go 32
+.h 32
+.htm 32
+.html 32
+.java 32
+.js 32
+.jsx 32
+.lua 32
+.m 32
+.pug 32
+.py 32
+.rs 32
+.scala 32
+.swift 32
+.ts 32
+.tsx 32
+
+#+--- Project-like files with source code ---+
+.csproj 31
+.vcxproj 31
+.sfproj 31
+.deployproj 31
+.sln 31
+
+#+--- Text and configuration files ---+
+.csv 33
+.json 33
+.md 33
+.nuspec 33
+.txt 33
+.xml 33
+.yaml 33
+.yml 33
+.toml 33
+
+#+--- Stylesheets ---+
+.css 35
+.scss 35
+.sass 35
+.less 35
