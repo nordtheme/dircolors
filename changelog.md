@@ -1,8 +1,8 @@
 <p align="center">
   <a href="https://www.nordtheme.com/ports/dircolors" target="_blank">
     <picture>
-      <source srcset="https://raw.githubusercontent.com/arcticicestudio/nord-docs/main/assets/images/ports/dircolors/repository-hero.svg?sanitize=true" width="100%" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-      <img srcset="https://raw.githubusercontent.com/arcticicestudio/nord-docs/main/assets/images/ports/dircolors/repository-hero.svg?sanitize=true" width="100%" />
+      <source srcset="https://raw.githubusercontent.com/nordtheme/web/main/assets/images/ports/dircolors/repository-hero.svg?sanitize=true" width="100%" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+      <img srcset="https://raw.githubusercontent.com/nordtheme/web/main/assets/images/ports/dircolors/repository-hero.svg?sanitize=true" width="100%" />
     </picture>
   </a>
 </p>
@@ -101,5 +101,5 @@ _2017-01-14_
 
 <!-- v0.2.0 -->
 
-[gh-nord-docs#155]: https://github.com/arcticicestudio/nord-docs/issues/155
+[gh-nord-docs#155]: https://github.com/nordtheme/web/issues/155
 [gh-nord#55]: https://github.com/nordtheme/nord/issues/55
