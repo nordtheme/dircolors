@@ -1,10 +1,5 @@
-# Copyright (C) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (C) 2017-present Sven Greb <development@svengreb.de>
-
-# Project:    Nord dircolors
-# Version:    0.2.0
-# Repository: https://github.com/arcticicestudio/nord-dircolors
-# License:    MIT
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+# This source code is licensed under the MIT license found in the license file.
 
 COLOR tty
 
