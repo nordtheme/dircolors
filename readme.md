@@ -55,7 +55,7 @@ Visit the [official website][nord-home] to learn all about the [features][nord-h
 
 Nord dircolors can be installed for all application that respect the `LS_COLORS` environment variable like GNU core utils [`ls`][wiki-ls], [`tree`][wiki-tree] or modern projects like [`fd`][gh-sharkdp/fd].
 
-Download the [`dir_colors`][gh-tree-dir_colors] file and place it as `~/.dir_colors` in your [home directory][wiki-home_dir].
+Download the [`dir_colors`][gh-tree-dir_colors] file and place it as `~/.dir_colors` in your [home directory][wiki-home_dir]. For light terminal backgrounds, use [`dir_colors_light`][src-dir_colors_light] instead. The light variant requires a truecolor terminal.
 
 For more details see the [official installation & activation guide][nord-docs-home-install] as well as the [GNU `dircolors` documentations][gnu-docs-dircolors].
 
@@ -66,6 +66,8 @@ To always use the latest development state of Nord dircolors, [clone the reposit
 ```sh
 ln -sr "$PWD/src/dir_colors" ~/.dir_colors
 ```
+
+To use the light variant, link `src/dir_colors_light` instead of `src/dir_colors`. Both files use the same activation steps below.
 
 #### Activation
 
@@ -85,6 +87,14 @@ test -r ~/.dir_colors && eval $(dircolors ~/.dir_colors)
 
 <p align="center">
   <strong>Beautiful highlighting for all your bits and bytes.</strong>
+</p>
+
+<p align="center">
+  An optional light variant with comprehensive file rules from <a href="https://github.com/trapd00r/LS_COLORS" target="_blank">LS_COLORS</a>, preserving text attributes, special-file backgrounds and symlinks colored by their targets.
+</p>
+
+<p align="center">
+  Custom Nord-derived shades retain distinctions between source colors, with darker gray and yellow foregrounds for light backgrounds. These are not the canonical Nord colors; see the <a href="src/dir_colors_light">configuration header</a> for the mapping and source snapshot.
 </p>
 
 <p align="center">
@@ -127,6 +137,8 @@ Please take a moment to read Nord's full [contributing guide][nord-contrib-guide
 
 The guide also includes information about [minimal, complete, and verifiable examples][nord-contrib-guide-mcve] and other ways to contribute to the project like [improving existing issues][nord-contrib-guide-impr-issues] and [giving feedback on issues and pull requests][nord-contrib-guide-feedback].
 
+The original Nord configuration is licensed under the [MIT license][license-mit]. The light variant retains the [Artistic License][license-artistic] of its LS_COLORS source.
+
 <p align="center">
   <picture>
     <source srcset="https://raw.githubusercontent.com/nordtheme/assets/main/static/images/elements/separators/iceberg/footer/dark/spaced.svg" width="100%" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
@@ -148,6 +160,9 @@ The guide also includes information about [minimal, complete, and verifiable exa
   </a>
 </p>
 
+[license-artistic]: license.artistic
+[license-mit]: license
+[src-dir_colors_light]: src/dir_colors_light
 [gh-sharkdp/fd]: https://github.com/sharkdp/fd
 [gh-tree-dir_colors]: https://github.com/nordtheme/dircolors/blob/develop/src/dir_colors
 [gnu-docs-dircolors]: https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html
