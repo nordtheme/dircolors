@@ -1,0 +1,768 @@
+# Nord light: comprehensive, opt-in truecolor variant.
+# Modified 2026-10-08: remap LS_COLORS to Nord-derived shades, darken pale gray
+# and yellow foregrounds, and place documentation names after .md/.rst rules.
+# Original color roles, text attributes and LINK target behavior are preserved.
+# Taxonomy source: https://github.com/trapd00r/LS_COLORS
+# Maintainers: Magnus Woldrich <m@japh.se>,
+#              Ryan Delaney <ryan.patrick.delaney@protonmail.com>
+# Based on a 769-line LS_COLORS snapshot, SHA-256:
+# e005033863e24ddb1b6d616248622a8dc27c09bdfe41221cb5219d7f1292f567
+# This derived file retains the Perl Artistic License; see license.artistic.
+# It is not covered solely by the repository's MIT license.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the Perl Artistic License for more details.
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the Perl Artistic License as published by the Perl Foundation,
+# either version 1.0 of the License, or (at your option) any later version.
+#
+# Canonical anchors: https://www.nordtheme.com/docs/colors-and-palettes
+# nord0  #2e3440 (46,52,64)    nord1  #3b4252 (59,66,82)
+# nord2  #434c5e (67,76,94)    nord3  #4c566a (76,86,106)
+# nord4  #d8dee9 (216,222,233) nord5  #e5e9f0 (229,233,240)
+# nord6  #eceff4 (236,239,244) nord7  #8fbcbb (143,188,187)
+# nord8  #88c0d0 (136,192,208) nord9  #81a1c1 (129,161,193)
+# nord10 #5e81ac (94,129,172)  nord11 #bf616a (191,97,106)
+# nord12 #d08770 (208,135,112) nord13 #ebcb8b (235,203,139)
+# nord14 #a3be8c (163,190,140) nord15 #b48ead (180,142,173)
+#
+# Mapping (custom Nord-derived shades, not the canonical Nord palette):
+# Decode source indices with the standard xterm palette: ANSI 0-15, the 6x6x6
+# cube 16-231, and grayscale 232-255. Actual terminal ANSI colors may differ.
+# Choose anchors by source HSV: saturation < 0.12 uses nord0-6; otherwise hue
+# [0,15)/[345,360) uses nord11, [15,45) nord12, [45,70) nord13,
+# [70,165) nord14, [165,190) nord7, [190,255) nord8-10, [255,345) nord15.
+# Within a family choose the nearest anchor by Euclidean Oklab distance.
+# Blend encoded sRGB channels: round(0.80*anchor + (1-0.80)*source), using
+# Python round (nearest integer, ties to even). Reuse the same result everywhere,
+# except pale gray foregrounds (216,221,230), (211,216,225), (206,211,220):
+# multiply each channel by 0.55 and round. Backgrounds retain the original blend.
+# Yellow (nord13-anchored) foregrounds use round(blended channel * 0.90).
+# Calculations use Python floats; exact decimal arithmetic may round differently.
+# Usage: GNU dircolors/ls and a truecolor terminal are required. TERM patterns
+# do not detect truecolor support. Preview from the repository root:
+# (eval "$(dircolors -b src/dir_colors_light)"; ls --color=always -CF .)
+# On macOS with Homebrew coreutils, use gdircolors and gls instead.
+# Intended background: Snow Storm (nord6). Some accents have low contrast;
+# readability is not certified. Default and attribute-only rules inherit terminal
+# colors; loading this file does not change the terminal theme.
+# GNU ls matches literal suffixes, not regexes. Inherited regex-looking keys are
+# retained as literals. File types and permissions can override suffix colors.
+
+COLOR tty
+TERM alacritty*
+TERM foot*
+TERM konsole*
+TERM rxvt*
+TERM screen*
+TERM st
+TERM st-256color
+TERM tmux*
+TERM wezterm
+TERM xterm*
+
+# Defaults and special file types.
+NORMAL 0
+RESET 0
+FILE 0
+BLK 38;2;94;130;181
+CAPABILITY 38;2;75;103;157
+CHR 38;2;157;195;131;1
+DIR 38;2;114;177;177
+DOOR 38;2;179;114;173
+EXEC 38;2;217;135;90;1
+FIFO 38;2;179;114;165
+LINK target
+MULTIHARDLINK 38;2;217;151;117;1
+ORPHAN 48;2;204;78;85;38;2;38;43;53;1
+MISSING 48;2;204;78;85;38;2;38;43;53;1
+OTHER_WRITABLE 38;2;215;184;100;1
+SETGID 48;2;214;188;111;38;2;37;42;51
+SETUID 38;2;215;184;100;1;3;48;2;86;94;110;1
+SOCK 38;2;195;114;157
+STICKY 38;2;133;201;193;48;2;42;47;57
+STICKY_OTHER_WRITABLE 48;2;44;49;59;38;2;179;141;173;3
+*LS_COLORS 48;2;171;114;157;38;2;195;114;157;1;3;4;7
+
+# Plain text, logs and markup.
+.txt 38;2;119;122;127
+.log 38;2;208;192;100
+.adoc 38;2;208;184;100
+.asciidoc 38;2;208;184;100
+.etx 38;2;208;184;100
+.info 38;2;208;184;100
+.markdown 38;2;208;184;100
+.md 38;2;208;184;100
+.mkd 38;2;208;184;100
+.mdx 38;2;208;184;100
+.nfo 38;2;208;184;100
+.org 38;2;208;184;100
+.norg 38;2;208;184;100
+.pod 38;2;208;184;100
+.rst 38;2;208;184;100
+.tex 38;2;208;184;100
+.textile 38;2;208;184;100
+
+# Documentation names must follow generic .md/.rst rules (last match wins).
+*README 38;2;215;184;100;1
+*README.rst 38;2;215;184;100;1
+*README.md 38;2;215;184;100;1
+*LICENSE 38;2;215;184;100;1
+*LICENSE.md 38;2;215;184;100;1
+*COPYING 38;2;215;184;100;1
+*INSTALL 38;2;215;184;100;1
+*COPYRIGHT 38;2;215;184;100;1
+*AUTHORS 38;2;215;184;100;1
+*HISTORY 38;2;215;184;100;1
+*CONTRIBUTORS 38;2;215;184;100;1
+*CONTRIBUTING 38;2;215;184;100;1
+*CONTRIBUTING.md 38;2;215;184;100;1
+*CHANGELOG 38;2;215;184;100;1
+*CHANGELOG.md 38;2;215;184;100;1
+*CODEOWNERS 38;2;215;184;100;1
+*PATENTS 38;2;215;184;100;1
+*VERSION 38;2;215;184;100;1
+*NOTICE 38;2;215;184;100;1
+*CHANGES 38;2;215;184;100;1
+
+# Structured data and databases.
+.bib 38;2;208;177;100
+.json 38;2;208;177;100
+.jsonc 38;2;208;177;100
+.json5 38;2;208;177;100
+.hjson 38;2;208;177;100
+.jsonl 38;2;208;177;100
+.jsonnet 38;2;208;177;100
+.libsonnet 38;2;201;177;100
+.ndjson 38;2;208;177;100
+.msg 38;2;208;177;100
+.pgn 38;2;208;177;100
+.rss 38;2;208;177;100
+.xml 38;2;208;177;100
+.fxml 38;2;208;177;100
+.toml 38;2;208;177;100
+.yaml 38;2;208;177;100
+.yml 38;2;208;177;100
+.RData 38;2;208;177;100
+.rdata 38;2;208;177;100
+.xsd 38;2;208;177;100
+.dtd 38;2;208;177;100
+.sgml 38;2;208;177;100
+.rng 38;2;208;177;100
+.rnc 38;2;208;177;100
+.sexp 38;2;208;177;100
+.accdb 38;2;94;122;165
+.accde 38;2;94;122;165
+.accdr 38;2;94;122;165
+.accdt 38;2;94;122;165
+.db 38;2;94;122;165
+.fmp12 38;2;94;122;165
+.fp7 38;2;94;122;165
+.localstorage 38;2;94;122;165
+.mdb 38;2;94;122;165
+.mde 38;2;94;122;165
+.sqlite 38;2;94;122;165
+.typelib 38;2;94;122;165
+.nc 38;2;94;122;165
+
+# Binary and editable documents, presentations and spreadsheets.
+.azw 38;2;179;141;189
+.azw3 38;2;179;141;189
+.cbr 38;2;179;141;189
+.cbz 38;2;179;141;189
+.chm 38;2;179;141;189
+.djvu 38;2;179;141;189
+.fb2 38;2;179;141;189
+.pdf 38;2;179;141;189
+.PDF 38;2;179;141;189
+.mobi 38;2;179;141;189
+.epub 38;2;179;141;189
+.docm 38;2;130;164;205;4
+.doc 38;2;130;164;205
+.docx 38;2;130;164;205
+.odb 38;2;130;164;205
+.odt 38;2;130;164;205
+.rtf 38;2;130;164;205
+.pages 38;2;130;164;205
+.odp 38;2;209;127;90
+.pps 38;2;209;127;90
+.ppt 38;2;209;127;90
+.pptx 38;2;209;127;90
+.ppts 38;2;209;127;90
+.pptxm 38;2;209;127;90;4
+.pptsm 38;2;209;127;90;4
+.prisma 38;2;217;151;117
+.csv 38;2;149;195;139
+.tsv 38;2;149;195;139
+.numbers 38;2;157;195;112
+.ods 38;2;157;195;112
+.xla 38;2;149;195;112
+.xls 38;2;157;195;112
+.xlsx 38;2;157;195;112
+.xlsxm 38;2;157;195;112;4
+.xltm 38;2;133;185;185;4
+.xltx 38;2;133;185;185
+.key 38;2;209;127;90
+
+# Configuration and version control.
+*config 1
+*cfg 1
+*conf 1
+*rc 1
+*authorized_keys 1
+*known_hosts 1
+.ini 1
+.plist 1
+.profile 1
+.bash_profile 1
+.bash_login 1
+.bash_logout 1
+.zshenv 1
+.zprofile 1
+.zlogin 1
+.zlogout 1
+.viminfo 1
+.pcf 1
+.psf 1
+.hidden-color-scheme 1
+.hidden-tmTheme 1
+.last-run 1
+.merged-ca-bundle 1
+.sublime-build 1
+.sublime-commands 1
+.sublime-keymap 1
+.sublime-settings 1
+.sublime-snippet 1
+.sublime-project 1
+.sublime-workspace 1
+.tmTheme 1
+.user-ca-bundle 1
+.rstheme 1
+.epf 1
+.git 38;2;195;114;157
+.github 38;2;195;114;157
+.gitignore 38;2;78;86;102
+.gitattributes 38;2;78;86;102
+.gitmodules 38;2;78;86;102
+
+# Source languages and headers; preserve source color distinctions.
+.awk 38;2;209;135;90
+.bash 38;2;209;135;90
+.bat 38;2;209;135;90
+.BAT 38;2;209;135;90
+.sed 38;2;209;135;90
+.sh 38;2;209;135;90
+.zsh 38;2;209;135;90
+.fish 38;2;209;135;90
+.vim 38;2;209;135;90
+.kak 38;2;209;135;90
+.nu 38;2;209;135;90
+.ahk 38;2;130;195;131
+.py 38;2;130;195;131
+.ipynb 38;2;130;195;131
+.xsh 38;2;130;195;131
+.rb 38;2;130;195;131
+.gemspec 38;2;130;195;131
+.pl 38;2;217;135;90
+.PL 38;2;196;78;85
+.pm 38;2;204;97;104
+.t 38;2;157;195;139
+.msql 38;2;217;151;117
+.mysql 38;2;217;151;117
+.prql 38;2;217;151;117
+.pgsql 38;2;217;151;117
+.sql 38;2;217;151;117
+.tcl 38;2;149;179;112;1
+.r 38;2;130;203;147
+.R 38;2;130;203;147
+.gs 38;2;128;197;217
+.clj 38;2;130;195;131
+.cljs 38;2;130;195;131
+.cljc 38;2;130;195;131
+.cljw 38;2;130;195;131
+.scala 38;2;130;195;131
+.sc 38;2;130;195;131
+.dart 38;2;114;201;201
+.asm 38;2;128;197;217
+.cl 38;2;128;197;217
+.lisp 38;2;128;197;217
+.rkt 38;2;128;197;217
+.el 38;2;128;197;217
+.elc 38;2;80;88;104
+.eln 38;2;80;88;104
+.lua 38;2;128;197;217
+.moon 38;2;128;197;217
+.c 38;2;128;197;217
+.C 38;2;128;197;217
+.h 38;2;130;164;197
+.H 38;2;130;164;197
+.tcc 38;2;130;164;197
+.c++ 38;2;128;197;217
+.h++ 38;2;130;164;197
+.hpp 38;2;130;164;197
+.hxx 38;2;130;164;197
+.ii 38;2;130;164;197
+.M 38;2;130;164;197
+.m 38;2;130;164;197
+.cc 38;2;128;197;217
+.cs 38;2;128;197;217
+.cp 38;2;128;197;217
+.cpp 38;2;128;197;217
+.cxx 38;2;128;197;217
+.cr 38;2;128;197;217
+.go 38;2;128;197;217
+.f 38;2;128;197;217
+.F 38;2;128;197;217
+.for 38;2;128;197;217
+.ftn 38;2;128;197;217
+.f90 38;2;128;197;217
+.F90 38;2;128;197;217
+.f95 38;2;128;197;217
+.F95 38;2;128;197;217
+.f03 38;2;128;197;217
+.F03 38;2;128;197;217
+.f08 38;2;128;197;217
+.F08 38;2;128;197;217
+.nim 38;2;128;197;217
+.nimble 38;2;128;197;217
+.s 38;2;130;164;197
+.S 38;2;130;164;197
+.rs 38;2;128;197;217
+.scpt 38;2;195;149;189
+.swift 38;2;195;149;189
+.sx 38;2;128;197;217
+.vala 38;2;128;197;217
+.vapi 38;2;128;197;217
+.hi 38;2;130;164;197
+.hs 38;2;128;197;217
+.lhs 38;2;128;197;217
+.ml 38;2;128;197;217
+.mli 38;2;130;164;197
+.mll 38;2;128;197;217
+.mly 38;2;128;197;217
+.agda 38;2;128;197;217
+.lagda 38;2;128;197;217
+.lagda.tex 38;2;128;197;217
+.lagda.rst 38;2;128;197;217
+.lagda.md 38;2;128;197;217
+.agdai 38;2;130;164;197
+.zig 38;2;128;197;217
+.v 38;2;128;197;217
+.rego 38;2;208;177;100
+.pyc 38;2;78;86;102
+.tf 38;2;187;133;165
+.tfstate 38;2;187;133;165
+.tfvars 38;2;187;133;165
+
+# Web requests, styles, markup, templates and scripts.
+.http 38;2;171;114;165;1
+.eml 38;2;171;114;165;1
+.css 38;2;130;156;205;1
+.less 38;2;130;156;205;1
+.sass 38;2;130;156;205;1
+.scss 38;2;130;156;205;1
+.htm 38;2;179;114;157;1
+.html 38;2;179;114;157;1
+.jhtm 38;2;179;114;157;1
+.mht 38;2;179;114;157;1
+.mustache 38;2;179;133;189;1
+.ejs 38;2;179;133;189;1
+.pug 38;2;179;133;189;1
+.svelte 38;2;179;133;189;1
+.vue 38;2;179;133;189;1
+.astro 38;2;179;133;189;1
+.js 38;2;122;164;197;1
+.jsx 38;2;122;164;197;1
+.ts 38;2;122;164;197;1
+.tsx 38;2;122;164;197;1
+.mjs 38;2;122;164;197;1
+.cjs 38;2;122;164;197;1
+.coffee 38;2;149;195;147;1
+.java 38;2;149;195;147;1
+.jsm 38;2;149;195;147;1
+.jsp 38;2;149;195;147;1
+.php 38;2;128;197;217
+.ctp 38;2;128;197;217
+.twig 38;2;128;197;217
+.vb 38;2;128;197;217
+.vba 38;2;128;197;217
+.vbs 38;2;128;197;217
+
+# Build entry points, configuration, generated artifacts and patches.
+*Containerfile 38;2;165;203;131
+.containerignore 38;2;78;86;102
+*Dockerfile 38;2;165;203;131
+.dockerignore 38;2;78;86;102
+*dune 38;2;165;203;131
+*dune-project 38;2;84;92;108
+.opam 38;2;78;86;102
+*Makefile 38;2;165;203;131
+*MANIFEST 38;2;84;92;108
+*pm_to_blib 38;2;78;86;102
+.nix 38;2;165;203;131
+.dhall 38;2;208;177;100
+.rake 38;2;165;203;131
+.am 38;2;82;90;106
+.in 38;2;82;90;106
+.hin 38;2;82;90;106
+.scan 38;2;82;90;106
+.m4 38;2;82;90;106
+.old 38;2;82;90;106
+.out 38;2;82;90;106
+.SKIP 38;2;86;94;110
+.gradle 38;2;165;203;131
+*WORKSPACE 38;2;165;203;131
+*BUILD 38;2;165;203;131
+.bazel 38;2;165;203;131
+.bazelrc 38;2;165;203;131
+.bazelversion 38;2;165;203;131
+.bzl 38;2;165;203;131
+*MODULE.bazel.lock 38;2;78;86;102
+*Cargo.toml 38;2;165;203;131
+*Cargo.lock 38;2;78;86;102
+.diff 48;2;195;114;157;38;2;38;43;53
+.patch 48;2;195;114;157;38;2;38;43;53;1
+
+# Raster and vector graphics.
+.bmp 38;2;171;133;173
+.dicom 38;2;171;133;173
+.tiff 38;2;171;133;173
+.tif 38;2;171;133;173
+.TIFF 38;2;171;133;173
+.cdr 38;2;171;133;173
+.flif 38;2;171;133;173
+.gif 38;2;171;133;173
+.icns 38;2;171;133;173
+.ico 38;2;171;133;173
+.jpeg 38;2;171;133;173
+.JPG 38;2;171;133;173
+.jpg 38;2;171;133;173
+.jxl 38;2;171;133;173
+.nth 38;2;171;133;173
+.png 38;2;171;133;173
+.psd 38;2;171;133;173
+.pxd 38;2;171;133;173
+.pxm 38;2;171;133;173
+.xpm 38;2;171;133;173
+.webp 38;2;171;133;173
+.ai 38;2;171;133;189
+.eps 38;2;171;133;189
+.epsf 38;2;171;133;189
+.drw 38;2;171;133;189
+.ps 38;2;171;133;189
+.svg 38;2;171;133;189
+
+# Video, subtitles, audio and fonts; original media distinctions retained.
+.avi 38;2;157;195;139
+.divx 38;2;157;195;139
+.IFO 38;2;157;195;139
+.m2v 38;2;157;195;139
+.m4v 38;2;157;195;139
+.mkv 38;2;157;195;139
+.MOV 38;2;157;195;139
+.mov 38;2;157;195;139
+.mp4 38;2;157;195;139
+.mpeg 38;2;157;195;139
+.mpg 38;2;157;195;139
+.ogm 38;2;157;195;139
+.rmvb 38;2;157;195;139
+.sample 38;2;157;195;139
+.wmv 38;2;157;195;139
+.3g2 38;2;157;195;147
+.3gp 38;2;157;195;147
+.gp3 38;2;157;195;147
+.webm 38;2;157;195;147
+.gp4 38;2;157;195;147
+.asf 38;2;157;195;147
+.flv 38;2;157;195;147
+.ogv 38;2;157;195;147
+.f4v 38;2;157;195;147
+.VOB 38;2;157;195;147;1
+.vob 38;2;157;195;147;1
+.ass 38;2;136;197;217
+.srt 38;2;136;197;217
+.ssa 38;2;136;197;217
+.sub 38;2;136;197;217
+.sup 38;2;136;197;217
+.vtt 38;2;136;197;217
+.3ga 38;2;201;135;109;1
+.S3M 38;2;201;135;109;1
+.aac 38;2;201;135;109;1
+.amr 38;2;201;135;109;1
+.au 38;2;201;135;109;1
+.caf 38;2;201;135;109;1
+.dat 38;2;201;135;109;1
+.dts 38;2;201;135;109;1
+.fcm 38;2;201;135;109;1
+.m4a 38;2;201;135;109;1
+.mod 38;2;201;135;109;1
+.mp3 38;2;201;135;109;1
+.mp4a 38;2;201;135;109;1
+.oga 38;2;201;135;109;1
+.ogg 38;2;201;135;109;1
+.opus 38;2;201;135;109;1
+.s3m 38;2;201;135;109;1
+.sid 38;2;201;135;109;1
+.wma 38;2;201;135;109;1
+.ape 38;2;201;170;100;1
+.aiff 38;2;201;170;100;1
+.cda 38;2;201;170;100;1
+.flac 38;2;201;170;100;1
+.alac 38;2;201;170;100;1
+.mid 38;2;201;170;100;1
+.midi 38;2;201;170;100;1
+.pcm 38;2;201;170;100;1
+.wav 38;2;201;170;100;1
+.wv 38;2;201;170;100;1
+.wvc 38;2;201;170;100;1
+.afm 38;2;133;177;177
+.fon 38;2;133;177;177
+.fnt 38;2;133;177;177
+.pfb 38;2;133;177;177
+.pfm 38;2;133;177;177
+.ttf 38;2;133;177;177
+.otf 38;2;133;177;177
+.woff 38;2;133;177;177
+.woff2 38;2;133;177;177
+.PFA 38;2;133;177;177
+.pfa 38;2;133;177;177
+
+# Archives, packaged applications and disk images.
+*.7z 38;2;130;195;112
+*.a 38;2;130;195;112
+*.arj 38;2;130;195;112
+*.br 38;2;130;195;112
+*.bz2 38;2;130;195;112
+*.cpio 38;2;130;195;112
+*.gz 38;2;130;195;112
+*.lrz 38;2;130;195;112
+*.lz 38;2;130;195;112
+*.lzma 38;2;130;195;112
+*.lzo 38;2;130;195;112
+*.rar 38;2;130;195;112
+*.s7z 38;2;130;195;112
+*.sz 38;2;130;195;112
+*.tar 38;2;130;195;112
+*.tbz 38;2;130;195;112
+*.tgz 38;2;130;195;112
+*.warc 38;2;130;195;112
+*.WARC 38;2;130;195;112
+*.xz 38;2;130;195;112
+*.z 38;2;130;195;112
+*.zip 38;2;130;195;112
+*.zipx 38;2;130;195;112
+*.zoo 38;2;130;195;112
+*.zpaq 38;2;130;195;112
+*.zst 38;2;130;195;112
+*.zstd 38;2;130;195;112
+*.zz 38;2;130;195;112
+.apk 38;2;217;143;109
+.ipa 38;2;217;143;109
+.deb 38;2;217;143;109
+.rpm 38;2;217;143;109
+.jad 38;2;217;143;109
+.jar 38;2;217;143;109
+.ear 38;2;217;143;109
+.war 38;2;217;143;109
+.cab 38;2;217;143;109
+.pak 38;2;217;143;109
+.pk3 38;2;217;143;109
+.vdf 38;2;217;143;109
+.vpk 38;2;217;143;109
+.bsp 38;2;217;143;109
+.dmg 38;2;217;143;109
+.crx 38;2;217;143;109
+.xpi 38;2;217;143;109
+.iso 38;2;188;78;85
+.img 38;2;188;78;85
+.bin 38;2;188;78;85
+.nrg 38;2;188;78;85
+.qcow 38;2;188;78;85
+.fvd 38;2;188;78;85
+.sparseimage 38;2;188;78;85
+.toast 38;2;188;78;85
+.vcd 38;2;188;78;85
+.vdi 38;2;188;78;85
+.vhd 38;2;188;78;85
+.vhdx 38;2;188;78;85
+.vfd 38;2;188;78;85
+.vmdk 38;2;188;78;85
+
+# Temporary, backup, compiled, state, error and capture files.
+.swp 38;2;86;94;110
+.swo 38;2;86;94;110
+.tmp 38;2;86;94;110
+.sassc 38;2;86;94;110
+.pacnew 38;2;75;130;189
+.un~ 38;2;80;88;104
+.orig 38;2;80;88;104
+.BUP 38;2;80;88;104
+.bak 38;2;80;88;104
+.o 38;2;80;88;104
+*core 38;2;80;88;104
+.mdump 38;2;80;88;104
+.rlib 38;2;80;88;104
+.dll 38;2;80;88;104
+.aria2 38;2;80;88;104
+.dump 38;2;80;88;104
+.stackdump 38;2;80;88;104
+.zcompdump 38;2;80;88;104
+.zwc 38;2;80;88;104
+.part 38;2;69;76;91
+.r[0-9]{0,2} 38;2;69;76;91
+.zx[0-9]{0,2} 38;2;69;76;91
+.z[0-9]{0,2} 38;2;69;76;91
+.pid 38;2;113;116;121
+.state 38;2;113;116;121
+*lockfile 38;2;113;116;121
+*lock 38;2;113;116;121
+.err 38;2;196;78;85;1
+.error 38;2;196;78;85;1
+.stderr 38;2;196;78;85;1
+.pcap 38;2;130;179;131
+.cap 38;2;130;179;131
+.dmp 38;2;130;179;131
+.allow 38;2;157;195;112
+.deny 38;2;204;78;85
+
+# Service units, metadata and encryption; original italic attributes retained.
+.service 38;2;114;193;201
+*@.service 38;2;114;193;201
+.socket 38;2;114;193;201
+.swap 38;2;114;193;201
+.device 38;2;114;193;201
+.mount 38;2;114;193;201
+.automount 38;2;114;193;201
+.target 38;2;114;193;201
+.path 38;2;114;193;201
+.timer 38;2;114;193;201
+.snapshot 38;2;114;193;201
+.lnk 38;2;103;164;205
+.application 38;2;141;193;193
+.cue 38;2;141;193;193
+.description 38;2;141;193;193
+.directory 38;2;141;193;193
+.m3u 38;2;141;193;193
+.m3u8 38;2;141;193;193
+.md5 38;2;141;193;193
+.properties 38;2;141;193;193
+.sfv 38;2;141;193;193
+.theme 38;2;141;193;193
+.torrent 38;2;141;193;193
+.urlview 38;2;141;193;193
+.webloc 38;2;141;193;193
+.asc 38;2;173;203;139;3
+.bfe 38;2;173;203;139;3
+.enc 38;2;173;203;139;3
+.gpg 38;2;173;203;139;3
+.signature 38;2;173;203;139;3
+.sig 38;2;173;203;139;3
+.p12 38;2;173;203;139;3
+.pem 38;2;173;203;139;3
+.pgp 38;2;173;203;139;3
+.p7s 38;2;173;203;139;3
+*id_dsa 38;2;173;203;139;3
+*id_rsa 38;2;173;203;139;3
+*id_ecdsa 38;2;173;203;139;3
+*id_ed25519 38;2;173;203;139;3
+
+# Emulation, calculator files, CAD, shaders and IDE metadata.
+.32x 38;2;195;141;189
+.cdi 38;2;195;141;189
+.fm2 38;2;195;141;189
+.rom 38;2;195;141;189
+.sav 38;2;195;141;189
+.st 38;2;195;141;189
+.a00 38;2;195;141;189
+.a52 38;2;195;141;189
+.A64 38;2;195;141;189
+.a64 38;2;195;141;189
+.a78 38;2;195;141;189
+.adf 38;2;195;141;189
+.atr 38;2;195;141;189
+.gb 38;2;195;141;189
+.gba 38;2;195;141;189
+.gbc 38;2;195;141;189
+.gel 38;2;195;141;189
+.gg 38;2;195;141;189
+.ggl 38;2;195;141;189
+.ipk 38;2;195;141;189
+.j64 38;2;195;141;189
+.nds 38;2;195;141;189
+.nes 38;2;195;141;189
+.sms 38;2;195;141;189
+.8xp 38;2;157;203;147
+.8eu 38;2;157;203;147
+.82p 38;2;157;203;147
+.83p 38;2;157;203;147
+.8xe 38;2;157;203;147
+.stl 38;2;217;143;117
+.dwg 38;2;217;143;117
+.ply 38;2;217;143;117
+.wrl 38;2;217;143;117
+.vert 38;2;201;170;100
+.comp 38;2;201;170;100
+.frag 38;2;201;170;100
+.spv 38;2;204;113;120
+.wgsl 38;2;171;133;173
+.xib 38;2;217;135;90
+.iml 38;2;209;127;90
+
+# macOS metadata, assets and Xcode configuration.
+.DS_Store 38;2;69;76;91
+.localized 38;2;69;76;91
+.CFUserTextEncoding 38;2;69;76;91
+*CodeResources 38;2;69;76;91
+*PkgInfo 38;2;69;76;91
+.nib 38;2;163;114;189
+.car 38;2;163;114;189
+.dylib 38;2;80;88;104
+.entitlements 1
+.pbxproj 1
+.strings 1
+.storyboard 38;2;204;78;85
+.xcconfig 1
+.xcsettings 1
+.xcuserstate 1
+.xcworkspacedata 1
+
+# Miscellaneous: original shared neutral and accent groups retained.
+.pot 38;2;116;119;124
+.pcb 38;2;116;119;124
+.mm 38;2;116;119;124
+.gbr 38;2;116;119;124
+.scm 38;2;116;119;124
+.xcf 38;2;116;119;124
+.spl 38;2;116;119;124
+.Rproj 38;2;215;192;100
+.sis 38;2;116;119;124
+.1p 38;2;116;119;124
+.3p 38;2;116;119;124
+.cnc 38;2;116;119;124
+.def 38;2;116;119;124
+.ex 38;2;116;119;124
+.example 38;2;116;119;124
+.feature 38;2;116;119;124
+.ger 38;2;116;119;124
+.ics 38;2;116;119;124
+.map 38;2;116;119;124
+.mf 38;2;116;119;124
+.mfasl 38;2;116;119;124
+.mi 38;2;116;119;124
+.mtx 38;2;116;119;124
+.pc 38;2;116;119;124
+.pi 38;2;116;119;124
+.plt 38;2;116;119;124
+.rdf 38;2;116;119;124
+.ru 38;2;116;119;124
+.sch 38;2;116;119;124
+.sty 38;2;116;119;124
+.sug 38;2;116;119;124
+.tdy 38;2;116;119;124
+.tfm 38;2;116;119;124
+.tfnt 38;2;116;119;124
+.tg 38;2;116;119;124
+.vcard 38;2;116;119;124
+.vcf 38;2;116;119;124
+.xln 38;2;116;119;124
